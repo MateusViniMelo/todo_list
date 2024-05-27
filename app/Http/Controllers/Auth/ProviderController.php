@@ -20,7 +20,7 @@ class ProviderController extends Controller
         
         $userProvider = Socialite::driver($provider)->stateless()->user();
 
-        //dd($userProvider);
+       
 
         $user = User::updateOrCreate([
             'email' => $userProvider->email
@@ -29,6 +29,7 @@ class ProviderController extends Controller
             'name' => $userProvider->name,
             'provider_id' => $userProvider->id,
             'email' => $userProvider->email,
+            'provider' => $provider,
             'provider_token' => $userProvider->token,
             'provider_refresh_token' => $userProvider->refreshToken,
             'avatar_image_url' => $userProvider->avatar
