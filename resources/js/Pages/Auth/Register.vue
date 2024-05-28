@@ -10,8 +10,8 @@ const form = useForm<IUserForm>({
     name: "",
     avatar: null,
     email: "",
-    password: "",
-    password_confirmation: "",
+    password: null,
+    password_confirmation: null,
 });
 function handleFileInput(event: Event) {
     const target = event.target as HTMLInputElement;

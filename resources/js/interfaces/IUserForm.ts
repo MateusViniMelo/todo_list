@@ -3,5 +3,5 @@ export interface IUserForm {
     avatar?: File | null;
     email: string;
     password: string | null;
-    password_confirmation?: string | null
+    password_confirmation: string | null
 }
